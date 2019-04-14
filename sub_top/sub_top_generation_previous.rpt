@@ -1,22 +1,22 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate /home/simon/Documents/pic_display_with_audio_on_nios2/sub_top.qsys --block-symbol-file --output-directory=/home/simon/Documents/pic_display_with_audio_on_nios2/sub_top --family="Cyclone V" --part=5CSEMA5F31C6
-Progress: Loading pic_display_with_audio_on_nios2/sub_top.qsys
+Info: qsys-generate D:\Project_Documents\love_pic_display_with_audio\sub_top.qsys --block-symbol-file --output-directory=D:\Project_Documents\love_pic_display_with_audio\sub_top --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading love_pic_display_with_audio/sub_top.qsys
 Progress: Reading input file
-Progress: Adding audio_0 [altera_up_avalon_audio 18.0]
+Progress: Adding audio_0 [altera_up_avalon_audio 17.1]
 Progress: Parameterizing module audio_0
-Progress: Adding clk_0 [clock_source 18.0]
+Progress: Adding clk_0 [clock_source 17.1]
 Progress: Parameterizing module clk_0
-Progress: Adding fifo_0 [altera_avalon_fifo 18.0]
+Progress: Adding fifo_0 [altera_avalon_fifo 17.1]
 Progress: Parameterizing module fifo_0
-Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.0]
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 17.1]
 Progress: Parameterizing module jtag_uart_0
-Progress: Adding nios2_qsys_0 [altera_nios2_qsys 16.1]
+Progress: Adding nios2_qsys_0 [altera_nios2_gen2 17.1]
 Progress: Parameterizing module nios2_qsys_0
-Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.0]
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 17.1]
 Progress: Parameterizing module onchip_memory2_0
-Progress: Adding pll_0 [altera_pll 18.0]
+Progress: Adding pll_0 [altera_pll 17.1]
 Progress: Parameterizing module pll_0
-Progress: Adding video_vga_controller_0 [altera_up_avalon_video_vga_controller 18.0]
+Progress: Adding video_vga_controller_0 [altera_up_avalon_video_vga_controller 17.1]
 Progress: Parameterizing module video_vga_controller_0
 Progress: Building connections
 Progress: Parameterizing connections
@@ -24,40 +24,35 @@ Progress: Validating
 Progress: Done reading input file
 Info: sub_top.fifo_0: For Avalon-ST and Avalon-MM combinations, data width is 32 bits.
 Info: sub_top.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
-Warning: sub_top.nios2_qsys_0: Nios II Classic cores are no longer recommended for new projects
 Info: sub_top.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
 Warning: sub_top.pll_0: Able to implement PLL - Actual settings differ from Requested settings
 Info: sub_top.video_vga_controller_0: Video Output Stream: Format: 1280 x 720 with Color: 10 (bits) x 3 (planes) converted to 8 (bits) per color plane
-Info: sub_top.fifo_0.out/video_vga_controller_0.avalon_vga_sink: Max channel is 255 for source and 0 for sink. Avalon-ST Adapter will be inserted..
 Info: sub_top.fifo_0.out/video_vga_controller_0.avalon_vga_sink: Ready latency is 1 for source and 0 for sink. Avalon-ST Adapter will be inserted..
-Info: sub_top.fifo_0.out/video_vga_controller_0.avalon_vga_sink: The source has a channel signal of 8 bits, but the sink does not. Avalon-ST Adapter will be inserted.
-Info: sub_top.fifo_0.out/video_vga_controller_0.avalon_vga_sink: The source has a error signal of 8 bits, but the sink does not. Avalon-ST Adapter will be inserted.
 Info: sub_top.fifo_0.out/video_vga_controller_0.avalon_vga_sink: The source has a empty signal of 1 bits, but the sink does not. Avalon-ST Adapter will be inserted.
 Info: sub_top.fifo_0.out/video_vga_controller_0.avalon_vga_sink: The source data signal is 20 bits, but the sink is 30 bits. Avalon-ST Adapter will be inserted.
-Warning: sub_top.pll_0: pll_0.locked must be exported, or connected to a matching conduit.
 Warning: sub_top.audio_0: Interrupt sender audio_0.interrupt is not connected to an interrupt receiver
 Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate /home/simon/Documents/pic_display_with_audio_on_nios2/sub_top.qsys --synthesis=VERILOG --output-directory=/home/simon/Documents/pic_display_with_audio_on_nios2/sub_top/synthesis --family="Cyclone V" --part=5CSEMA5F31C6
-Progress: Loading pic_display_with_audio_on_nios2/sub_top.qsys
+Info: qsys-generate D:\Project_Documents\love_pic_display_with_audio\sub_top.qsys --synthesis=VERILOG --output-directory=D:\Project_Documents\love_pic_display_with_audio\sub_top\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading love_pic_display_with_audio/sub_top.qsys
 Progress: Reading input file
-Progress: Adding audio_0 [altera_up_avalon_audio 18.0]
+Progress: Adding audio_0 [altera_up_avalon_audio 17.1]
 Progress: Parameterizing module audio_0
-Progress: Adding clk_0 [clock_source 18.0]
+Progress: Adding clk_0 [clock_source 17.1]
 Progress: Parameterizing module clk_0
-Progress: Adding fifo_0 [altera_avalon_fifo 18.0]
+Progress: Adding fifo_0 [altera_avalon_fifo 17.1]
 Progress: Parameterizing module fifo_0
-Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.0]
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 17.1]
 Progress: Parameterizing module jtag_uart_0
-Progress: Adding nios2_qsys_0 [altera_nios2_qsys 16.1]
+Progress: Adding nios2_qsys_0 [altera_nios2_gen2 17.1]
 Progress: Parameterizing module nios2_qsys_0
-Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.0]
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 17.1]
 Progress: Parameterizing module onchip_memory2_0
-Progress: Adding pll_0 [altera_pll 18.0]
+Progress: Adding pll_0 [altera_pll 17.1]
 Progress: Parameterizing module pll_0
-Progress: Adding video_vga_controller_0 [altera_up_avalon_video_vga_controller 18.0]
+Progress: Adding video_vga_controller_0 [altera_up_avalon_video_vga_controller 17.1]
 Progress: Parameterizing module video_vga_controller_0
 Progress: Building connections
 Progress: Parameterizing connections
@@ -65,29 +60,22 @@ Progress: Validating
 Progress: Done reading input file
 Info: sub_top.fifo_0: For Avalon-ST and Avalon-MM combinations, data width is 32 bits.
 Info: sub_top.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
-Warning: sub_top.nios2_qsys_0: Nios II Classic cores are no longer recommended for new projects
 Info: sub_top.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
 Warning: sub_top.pll_0: Able to implement PLL - Actual settings differ from Requested settings
 Info: sub_top.video_vga_controller_0: Video Output Stream: Format: 1280 x 720 with Color: 10 (bits) x 3 (planes) converted to 8 (bits) per color plane
-Info: sub_top.fifo_0.out/video_vga_controller_0.avalon_vga_sink: Max channel is 255 for source and 0 for sink. Avalon-ST Adapter will be inserted..
 Info: sub_top.fifo_0.out/video_vga_controller_0.avalon_vga_sink: Ready latency is 1 for source and 0 for sink. Avalon-ST Adapter will be inserted..
-Info: sub_top.fifo_0.out/video_vga_controller_0.avalon_vga_sink: The source has a channel signal of 8 bits, but the sink does not. Avalon-ST Adapter will be inserted.
-Info: sub_top.fifo_0.out/video_vga_controller_0.avalon_vga_sink: The source has a error signal of 8 bits, but the sink does not. Avalon-ST Adapter will be inserted.
 Info: sub_top.fifo_0.out/video_vga_controller_0.avalon_vga_sink: The source has a empty signal of 1 bits, but the sink does not. Avalon-ST Adapter will be inserted.
 Info: sub_top.fifo_0.out/video_vga_controller_0.avalon_vga_sink: The source data signal is 20 bits, but the sink is 30 bits. Avalon-ST Adapter will be inserted.
-Warning: sub_top.pll_0: pll_0.locked must be exported, or connected to a matching conduit.
 Warning: sub_top.audio_0: Interrupt sender audio_0.interrupt is not connected to an interrupt receiver
 Info: sub_top: Generating sub_top "sub_top" for QUARTUS_SYNTH
-Info: Inserting clock-crossing logic between cmd_demux.src2 and cmd_mux_002.sink0
-Info: Inserting clock-crossing logic between rsp_demux_002.src0 and rsp_mux.sink2
+Info: Inserting clock-crossing logic between cmd_demux.src3 and cmd_mux_003.sink0
+Info: Inserting clock-crossing logic between rsp_demux_003.src0 and rsp_mux.sink3
 Info: avalon_st_adapter: Inserting data_format_adapter: data_format_adapter_0
-Info: avalon_st_adapter: Inserting channel_adapter: channel_adapter_0
-Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter: Inserting timing_adapter: timing_adapter_0
 Error: avalon_st_adapter.data_format_adapter_0: Output symbols per beat:(3) not multiple of input symbols per beat:(2).  Input interface symbols per beat is less than output symbols per beat. In this case, output symbols per beat must be an even multiple of input symbols per beat.
 Error: avalon_st_adapter.data_format_adapter_0: Unsupported adaptation: The input interface uses the empty signal. However, the output interface is not using the empty signal.
 Error: avalon_st_adapter.data_format_adapter_0: The output interface has no empty signal, but this adapter has been configured to adapt a narrow input interface  symbols per beat(2) to a wide output interface symbols per beat(3).
 Error: Generation stopped, 12 or more modules remaining
 Info: sub_top: Done "sub_top" with 12 modules, 1 files
-Error: qsys-generate failed with exit code 1: 4 Errors, 4 Warnings
+Error: qsys-generate failed with exit code 1: 4 Errors, 2 Warnings
 Info: Finished: Create HDL design files for synthesis

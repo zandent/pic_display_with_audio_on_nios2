@@ -5,9 +5,10 @@
   <columns>
    <connections preferredWidth="175" />
    <irq preferredWidth="34" />
+   <name preferredWidth="232" />
   </columns>
  </systemtable>
  <library
-   expandedCategories="Library/University Program,Library/University Program/Audio &amp; Video,Library/University Program/Audio &amp; Video/Video,Library/Basic Functions,Library,Library/Qsys Interconnect/Memory-Mapped,Project,Library/Qsys Interconnect,Library/Qsys Interconnect/Memory-Mapped Alpha,Library/Basic Functions/On Chip Memory" />
- <window width="1391" height="765" x="167" y="118" />
+   expandedCategories="Library/University Program,Library/Basic Functions,Library/Qsys Interconnect/Memory-Mapped Alpha,Library/Qsys Interconnect/Memory-Mapped,Library/University Program/Audio &amp; Video/Video,Library,Library/University Program/Audio &amp; Video,Library/Qsys Interconnect,Library/Basic Functions/On Chip Memory,Project" />
+ <window width="1936" height="1056" x="-8" y="-8" />
 </preferences>

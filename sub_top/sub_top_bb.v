@@ -12,7 +12,8 @@ module sub_top (
 	video_vga_controller_0_external_interface_SYNC,
 	video_vga_controller_0_external_interface_R,
 	video_vga_controller_0_external_interface_G,
-	video_vga_controller_0_external_interface_B);	
+	video_vga_controller_0_external_interface_B,
+	pll_0_locked_export);	
 
 	input		audio_0_external_interface_BCLK;
 	output		audio_0_external_interface_DACDAT;
@@ -27,4 +28,5 @@ module sub_top (
 	output	[7:0]	video_vga_controller_0_external_interface_R;
 	output	[7:0]	video_vga_controller_0_external_interface_G;
 	output	[7:0]	video_vga_controller_0_external_interface_B;
+	output		pll_0_locked_export;
 endmodule

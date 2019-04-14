@@ -4,7 +4,7 @@ editor if you plan to continue editing the block that represents it in
 the Block Editor! File corruption is VERY likely to occur.
 */
 /*
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -20,8 +20,8 @@ refer to the applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 0 0 624 368)
-	(text "sub_top" (rect 289 -1 320 11)(font "Arial" (font_size 10)))
+	(rect 0 0 640 368)
+	(text "sub_top" (rect 297 -1 328 11)(font "Arial" (font_size 10)))
 	(text "inst" (rect 8 352 20 364)(font "Arial" ))
 	(port
 		(pt 0 72)
@@ -57,6 +57,13 @@ refer to the applicable agreement for further details.
 		(text "audio_0_external_interface_DACDAT" (rect 0 0 156 12)(font "Arial" (font_size 8)))
 		(text "audio_0_external_interface_DACDAT" (rect 4 77 202 88)(font "Arial" (font_size 8)))
 		(line (pt 0 88)(pt 272 88)(line_width 1))
+	)
+	(port
+		(pt 640 72)
+		(output)
+		(text "pll_0_locked_export" (rect 0 0 79 12)(font "Arial" (font_size 8)))
+		(text "pll_0_locked_export" (rect 539 61 653 72)(font "Arial" (font_size 8)))
+		(line (pt 640 72)(pt 368 72)(line_width 1))
 	)
 	(port
 		(pt 0 224)
@@ -121,6 +128,8 @@ refer to the applicable agreement for further details.
 		(text "DACLRCK" (rect 277 99 596 208)(font "Arial" (color 0 0 0)))
 		(text "clk" (rect 257 115 532 243)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "clk" (rect 277 139 572 288)(font "Arial" (color 0 0 0)))
+		(text "pll_0_locked" (rect 369 43 810 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 338 67 712 144)(font "Arial" (color 0 0 0)))
 		(text "reset" (rect 243 155 516 323)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "reset_n" (rect 277 179 596 368)(font "Arial" (color 0 0 0)))
 		(text "video_vga_controller_0_external_interface" (rect 25 195 296 403)(font "Arial" (color 128 0 0)(font_size 9)))
@@ -132,22 +141,24 @@ refer to the applicable agreement for further details.
 		(text "R" (rect 277 299 560 608)(font "Arial" (color 0 0 0)))
 		(text "G" (rect 277 315 560 640)(font "Arial" (color 0 0 0)))
 		(text "B" (rect 277 331 560 672)(font "Arial" (color 0 0 0)))
-		(text " system " (rect 589 352 1226 714)(font "Arial" ))
-		(line (pt 272 32)(pt 352 32)(line_width 1))
-		(line (pt 352 32)(pt 352 352)(line_width 1))
-		(line (pt 272 352)(pt 352 352)(line_width 1))
+		(text " sub_top " (rect 603 352 1260 714)(font "Arial" ))
+		(line (pt 272 32)(pt 368 32)(line_width 1))
+		(line (pt 368 32)(pt 368 352)(line_width 1))
+		(line (pt 272 352)(pt 368 352)(line_width 1))
 		(line (pt 272 32)(pt 272 352)(line_width 1))
 		(line (pt 273 52)(pt 273 108)(line_width 1))
 		(line (pt 274 52)(pt 274 108)(line_width 1))
 		(line (pt 273 124)(pt 273 148)(line_width 1))
 		(line (pt 274 124)(pt 274 148)(line_width 1))
+		(line (pt 367 52)(pt 367 76)(line_width 1))
+		(line (pt 366 52)(pt 366 76)(line_width 1))
 		(line (pt 273 164)(pt 273 188)(line_width 1))
 		(line (pt 274 164)(pt 274 188)(line_width 1))
 		(line (pt 273 204)(pt 273 340)(line_width 1))
 		(line (pt 274 204)(pt 274 340)(line_width 1))
-		(line (pt 0 0)(pt 624 0)(line_width 1))
-		(line (pt 624 0)(pt 624 368)(line_width 1))
-		(line (pt 0 368)(pt 624 368)(line_width 1))
+		(line (pt 0 0)(pt 640 0)(line_width 1))
+		(line (pt 640 0)(pt 640 368)(line_width 1))
+		(line (pt 0 368)(pt 640 368)(line_width 1))
 		(line (pt 0 0)(pt 0 368)(line_width 1))
 	)
 )
