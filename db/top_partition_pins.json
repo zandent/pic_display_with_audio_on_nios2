@@ -1,0 +1,137 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "audio_0_external_interface_DACDAT",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_HS",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_VS",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_BLANK",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_R[0]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_R[4]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_R[5]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_R[6]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_R[7]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_G[0]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_G[1]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_G[2]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_G[3]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_G[4]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_G[5]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_G[6]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_G[7]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "video_vga_controller_0_external_interface_B[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset_reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "audio_0_external_interface_DACLRCK",
+					"strict" : false
+				},
+				{
+					"name" : "audio_0_external_interface_BCLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

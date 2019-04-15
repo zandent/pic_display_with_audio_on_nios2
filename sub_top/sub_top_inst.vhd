@@ -12,8 +12,7 @@
 			video_vga_controller_0_external_interface_SYNC  : out std_logic;                           -- SYNC
 			video_vga_controller_0_external_interface_R     : out std_logic_vector(7 downto 0);        -- R
 			video_vga_controller_0_external_interface_G     : out std_logic_vector(7 downto 0);        -- G
-			video_vga_controller_0_external_interface_B     : out std_logic_vector(7 downto 0);        -- B
-			pll_0_locked_export                             : out std_logic                            -- export
+			video_vga_controller_0_external_interface_B     : out std_logic_vector(7 downto 0)         -- B
 		);
 	end component sub_top;
 
@@ -31,7 +30,6 @@
 			video_vga_controller_0_external_interface_SYNC  => CONNECTED_TO_video_vga_controller_0_external_interface_SYNC,  --                                          .SYNC
 			video_vga_controller_0_external_interface_R     => CONNECTED_TO_video_vga_controller_0_external_interface_R,     --                                          .R
 			video_vga_controller_0_external_interface_G     => CONNECTED_TO_video_vga_controller_0_external_interface_G,     --                                          .G
-			video_vga_controller_0_external_interface_B     => CONNECTED_TO_video_vga_controller_0_external_interface_B,     --                                          .B
-			pll_0_locked_export                             => CONNECTED_TO_pll_0_locked_export                              --                              pll_0_locked.export
+			video_vga_controller_0_external_interface_B     => CONNECTED_TO_video_vga_controller_0_external_interface_B      --                                          .B
 		);
 

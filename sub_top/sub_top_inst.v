@@ -11,7 +11,6 @@
 		.video_vga_controller_0_external_interface_SYNC  (<connected-to-video_vga_controller_0_external_interface_SYNC>),  //                                          .SYNC
 		.video_vga_controller_0_external_interface_R     (<connected-to-video_vga_controller_0_external_interface_R>),     //                                          .R
 		.video_vga_controller_0_external_interface_G     (<connected-to-video_vga_controller_0_external_interface_G>),     //                                          .G
-		.video_vga_controller_0_external_interface_B     (<connected-to-video_vga_controller_0_external_interface_B>),     //                                          .B
-		.pll_0_locked_export                             (<connected-to-pll_0_locked_export>)                              //                              pll_0_locked.export
+		.video_vga_controller_0_external_interface_B     (<connected-to-video_vga_controller_0_external_interface_B>)      //                                          .B
 	);
 

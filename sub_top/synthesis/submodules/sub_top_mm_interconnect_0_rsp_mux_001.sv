@@ -1,4 +1,4 @@
-// (C) 2001-2017 Intel Corporation. All rights reserved.
+// (C) 2001-2018 Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 
 // files from any of the foregoing (including device programming or simulation 
@@ -24,10 +24,10 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/17.1std/ip/merlin/altera_merlin_multiplexer/altera_merlin_multiplexer.sv.terp#1 $
+// $Id: //acds/rel/18.0std/ip/merlin/altera_merlin_multiplexer/altera_merlin_multiplexer.sv.terp#1 $
 // $Revision: #1 $
-// $Date: 2017/07/30 $
-// $Author: swbranch $
+// $Date: 2018/01/31 $
+// $Author: psgswbuild $
 
 // ------------------------------------------
 // Merlin Multiplexer
@@ -43,8 +43,8 @@
 //   ARBITRATION_SHARES:  1 1
 //   ARBITRATION_SCHEME   "no-arb"
 //   PIPELINE_ARB:        0
-//   PKT_TRANS_LOCK:      55 (arbitration locking enabled)
-//   ST_DATA_W:           91
+//   PKT_TRANS_LOCK:      54 (arbitration locking enabled)
+//   ST_DATA_W:           90
 //   ST_CHANNEL_W:        6
 // ------------------------------------------
 
@@ -54,14 +54,14 @@ module sub_top_mm_interconnect_0_rsp_mux_001
     // Sinks
     // ----------------------
     input                       sink0_valid,
-    input [91-1   : 0]  sink0_data,
+    input [90-1   : 0]  sink0_data,
     input [6-1: 0]  sink0_channel,
     input                       sink0_startofpacket,
     input                       sink0_endofpacket,
     output                      sink0_ready,
 
     input                       sink1_valid,
-    input [91-1   : 0]  sink1_data,
+    input [90-1   : 0]  sink1_data,
     input [6-1: 0]  sink1_channel,
     input                       sink1_startofpacket,
     input                       sink1_endofpacket,
@@ -72,7 +72,7 @@ module sub_top_mm_interconnect_0_rsp_mux_001
     // Source
     // ----------------------
     output                      src_valid,
-    output [91-1    : 0] src_data,
+    output [90-1    : 0] src_data,
     output [6-1 : 0] src_channel,
     output                      src_startofpacket,
     output                      src_endofpacket,
@@ -84,13 +84,13 @@ module sub_top_mm_interconnect_0_rsp_mux_001
     input clk,
     input reset
 );
-    localparam PAYLOAD_W        = 91 + 6 + 2;
+    localparam PAYLOAD_W        = 90 + 6 + 2;
     localparam NUM_INPUTS       = 2;
     localparam SHARE_COUNTER_W  = 1;
     localparam PIPELINE_ARB     = 0;
-    localparam ST_DATA_W        = 91;
+    localparam ST_DATA_W        = 90;
     localparam ST_CHANNEL_W     = 6;
-    localparam PKT_TRANS_LOCK   = 55;
+    localparam PKT_TRANS_LOCK   = 54;
 
     // ------------------------------------------
     // Signals
@@ -119,8 +119,8 @@ module sub_top_mm_interconnect_0_rsp_mux_001
     // ------------------------------------------
     reg [NUM_INPUTS - 1 : 0] lock;
     always @* begin
-      lock[0] = sink0_data[55];
-      lock[1] = sink1_data[55];
+      lock[0] = sink0_data[54];
+      lock[1] = sink1_data[54];
     end
 
     assign last_cycle = src_valid & src_ready & src_endofpacket & ~(|(lock & grant));

@@ -1,4 +1,4 @@
-// (C) 2001-2017 Intel Corporation. All rights reserved.
+// (C) 2001-2018 Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 
 // files from any of the foregoing (including device programming or simulation 
@@ -24,10 +24,10 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/17.1std/ip/merlin/altera_merlin_router/altera_merlin_router.sv.terp#1 $
+// $Id: //acds/rel/18.0std/ip/merlin/altera_merlin_router/altera_merlin_router.sv.terp#1 $
 // $Revision: #1 $
-// $Date: 2017/07/30 $
-// $Author: swbranch $
+// $Date: 2018/01/31 $
+// $Author: psgswbuild $
 
 // -------------------------------------------------------
 // Merlin Router
@@ -47,16 +47,16 @@ module sub_top_mm_interconnect_0_router_001_default_decode
      parameter DEFAULT_CHANNEL = 1,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 3 
+               DEFAULT_DESTID = 4 
    )
-  (output [77 - 75 : 0] default_destination_id,
+  (output [76 - 74 : 0] default_destination_id,
    output [6-1 : 0] default_wr_channel,
    output [6-1 : 0] default_rd_channel,
    output [6-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[77 - 75 : 0];
+    DEFAULT_DESTID[76 - 74 : 0];
 
   generate
     if (DEFAULT_CHANNEL == -1) begin : no_default_channel_assignment
@@ -93,7 +93,7 @@ module sub_top_mm_interconnect_0_router_001
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [91-1 : 0]    sink_data,
+    input  [90-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -102,7 +102,7 @@ module sub_top_mm_interconnect_0_router_001
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [91-1    : 0] src_data,
+    output reg [90-1    : 0] src_data,
     output reg [6-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
@@ -112,18 +112,18 @@ module sub_top_mm_interconnect_0_router_001
     // -------------------------------------------------------
     // Local parameters and variables
     // -------------------------------------------------------
-    localparam PKT_ADDR_H = 50;
+    localparam PKT_ADDR_H = 49;
     localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 77;
-    localparam PKT_DEST_ID_L = 75;
-    localparam PKT_PROTECTION_H = 81;
-    localparam PKT_PROTECTION_L = 79;
-    localparam ST_DATA_W = 91;
+    localparam PKT_DEST_ID_H = 76;
+    localparam PKT_DEST_ID_L = 74;
+    localparam PKT_PROTECTION_H = 80;
+    localparam PKT_PROTECTION_L = 78;
+    localparam ST_DATA_W = 90;
     localparam ST_CHANNEL_W = 6;
     localparam DECODER_TYPE = 0;
 
-    localparam PKT_TRANS_WRITE = 53;
-    localparam PKT_TRANS_READ  = 54;
+    localparam PKT_TRANS_WRITE = 52;
+    localparam PKT_TRANS_READ  = 53;
 
     localparam PKT_ADDR_W = PKT_ADDR_H-PKT_ADDR_L + 1;
     localparam PKT_DEST_ID_W = PKT_DEST_ID_H-PKT_DEST_ID_L + 1;
@@ -134,14 +134,14 @@ module sub_top_mm_interconnect_0_router_001
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h4000 - 64'h3000); 
-    localparam PAD1 = log2ceil(64'h5000 - 64'h4800); 
+    localparam PAD0 = log2ceil(64'h2000 - 64'h1000); 
+    localparam PAD1 = log2ceil(64'h3000 - 64'h2800); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h5000;
+    localparam ADDR_RANGE = 64'h3000;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -189,16 +189,16 @@ module sub_top_mm_interconnect_0_router_001
         // Sets the channel and destination ID based on the address
         // --------------------------------------------------
 
-    // ( 0x3000 .. 0x4000 )
-    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 15'h3000   ) begin
+    // ( 0x1000 .. 0x2000 )
+    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 14'h1000   ) begin
             src_channel = 6'b10;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
-    // ( 0x4800 .. 0x5000 )
-    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 15'h4800   ) begin
+    // ( 0x2800 .. 0x3000 )
+    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 14'h2800   ) begin
             src_channel = 6'b01;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
 end

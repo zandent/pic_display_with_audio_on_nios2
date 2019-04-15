@@ -4,7 +4,6 @@
 			audio_0_external_interface_DACDAT               : out std_logic;                           -- DACDAT
 			audio_0_external_interface_DACLRCK              : in  std_logic                    := 'X'; -- DACLRCK
 			clk_clk                                         : in  std_logic                    := 'X'; -- clk
-			pll_0_locked_export                             : out std_logic;                           -- export
 			reset_reset_n                                   : in  std_logic                    := 'X'; -- reset_n
 			video_vga_controller_0_external_interface_CLK   : out std_logic;                           -- CLK
 			video_vga_controller_0_external_interface_HS    : out std_logic;                           -- HS
