@@ -18,25 +18,25 @@
 // altera message_level Level1 
 // altera message_off 10034 10035 10036 10037 10230 10240 10030 
 
-module sub_top_onchip_memory2_0 (
-                                  // inputs:
-                                   address,
-                                   byteenable,
-                                   chipselect,
-                                   clk,
-                                   clken,
-                                   freeze,
-                                   reset,
-                                   reset_req,
-                                   write,
-                                   writedata,
+module sub_top_onchip_memory_0 (
+                                 // inputs:
+                                  address,
+                                  byteenable,
+                                  chipselect,
+                                  clk,
+                                  clken,
+                                  freeze,
+                                  reset,
+                                  reset_req,
+                                  write,
+                                  writedata,
 
-                                  // outputs:
-                                   readdata
-                                )
+                                 // outputs:
+                                  readdata
+                               )
 ;
 
-  parameter INIT_FILE = "sub_top_onchip_memory2_0.hex";
+  parameter INIT_FILE = "sub_top_onchip_memory_0.hex";
 
 
   output  [ 31: 0] readdata;
