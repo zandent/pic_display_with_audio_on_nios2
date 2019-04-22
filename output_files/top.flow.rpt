@@ -1,5 +1,5 @@
 Flow report for top
-Sat Apr 20 00:19:57 2019
+Sun Apr 21 21:57:52 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Apr 20 00:19:42 2019       ;
+; Flow Status                     ; Successful - Sun Apr 21 21:57:40 2019       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; top                                         ;
 ; Top-level Entity Name           ; top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,016 / 32,070 ( 3 % )                      ;
-; Total registers                 ; 1730                                        ;
-; Total pins                      ; 34 / 457 ( 7 % )                            ;
+; Logic utilization (in ALMs)     ; 1,321 / 32,070 ( 4 % )                      ;
+; Total registers                 ; 2209                                        ;
+; Total pins                      ; 72 / 457 ( 16 % )                           ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 137,344 / 4,065,280 ( 3 % )                 ;
+; Total block memory bits         ; 88,320 / 4,065,280 ( 2 % )                  ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/20/2019 00:16:45 ;
+; Start date & time ; 04/21/2019 21:55:49 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top                 ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-----------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                     ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+-----------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 27332938991484.155573380310944                            ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 172308996745943.155589814808184                           ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                        ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                         ; --            ; --          ; --         ;
 ; MISC_FILE                           ; sub_top/synthesis/../sub_top.cmp                          ; --            ; --          ; --         ;
@@ -91,7 +91,7 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                              ; --            ; --          ; --         ;
 ; SLD_FILE                            ; sub_top/synthesis/sub_top.regmap                          ; --            ; --          ; --         ;
 ; SLD_FILE                            ; sub_top/synthesis/sub_top.debuginfo                       ; --            ; --          ; --         ;
-; SLD_INFO                            ; QSYS_NAME sub_top HAS_SOPCINFO 1 GENERATION_ID 1555727359 ; --            ; sub_top     ; --         ;
+; SLD_INFO                            ; QSYS_NAME sub_top HAS_SOPCINFO 1 GENERATION_ID 1555898062 ; --            ; sub_top     ; --         ;
 ; SOPCINFO_FILE                       ; sub_top/synthesis/../../sub_top.sopcinfo                  ; --            ; --          ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                        ; --            ; --          ; --         ;
 +-------------------------------------+-----------------------------------------------------------+---------------+-------------+------------+
@@ -102,24 +102,24 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:56     ; 1.0                     ; 5031 MB             ; 00:01:11                           ;
-; Fitter               ; 00:01:31     ; 1.1                     ; 6819 MB             ; 00:02:50                           ;
-; Assembler            ; 00:00:14     ; 1.0                     ; 4883 MB             ; 00:00:10                           ;
-; Timing Analyzer      ; 00:00:14     ; 1.7                     ; 5266 MB             ; 00:00:19                           ;
-; Total                ; 00:02:55     ; --                      ; --                  ; 00:04:30                           ;
+; Analysis & Synthesis ; 00:00:35     ; 1.0                     ; 1219 MB             ; 00:01:09                           ;
+; Fitter               ; 00:01:03     ; 1.1                     ; 2885 MB             ; 00:02:02                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 1004 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:11     ; 1.6                     ; 1438 MB             ; 00:00:18                           ;
+; Total                ; 00:01:57     ; --                      ; --                  ; 00:03:36                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-I12AH40  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-I12AH40  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-I12AH40  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-I12AH40  ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++----------------------+------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++----------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; simon-XPS        ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; Fitter               ; simon-XPS        ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; Assembler            ; simon-XPS        ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; Timing Analyzer      ; simon-XPS        ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
++----------------------+------------------+----------------+------------+----------------+
 
 
 ------------
