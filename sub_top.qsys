@@ -25,6 +25,14 @@
          type = "String";
       }
    }
+   element avalon_MM_4_to_1_adapter_0
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
    element clk_0
    {
       datum _sortIndex
@@ -53,7 +61,7 @@
    {
       datum _sortIndex
       {
-         value = "8";
+         value = "9";
          type = "int";
       }
    }
@@ -99,6 +107,38 @@
       datum baseAddress
       {
          value = "0";
+         type = "String";
+      }
+   }
+   element sub_top
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element sub_top
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element sub_top
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element sub_top
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
          type = "String";
       }
    }
@@ -184,6 +224,11 @@
   <parameter name="avalon_bus_type" value="Memory Mapped" />
   <parameter name="dw" value="32" />
  </module>
+ <module
+   name="avalon_MM_4_to_1_adapter_0"
+   kind="avalon_MM_4_to_1_adapter"
+   version="1.0"
+   enabled="1" />
  <module name="clk_0" kind="clock_source" version="18.0" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -501,6 +546,15 @@
    kind="avalon"
    version="18.0"
    start="video_dma_controller_0.avalon_dma_master"
+   end="avalon_MM_4_to_1_adapter_0.avalon_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.0"
+   start="avalon_MM_4_to_1_adapter_0.avalon_master"
    end="new_sdram_controller_0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
@@ -624,6 +678,11 @@
    start="sys_sdram_pll_0.sys_clk"
    end="video_dma_controller_0.clk" />
  <connection
+   kind="clock"
+   version="18.0"
+   start="sys_sdram_pll_0.sys_clk"
+   end="avalon_MM_4_to_1_adapter_0.clock_reset" />
+ <connection
    kind="interrupt"
    version="18.0"
    start="nios2_qsys_0.irq"
@@ -672,6 +731,11 @@
    version="18.0"
    start="sys_sdram_pll_0.reset_source"
    end="video_dma_controller_0.reset" />
+ <connection
+   kind="reset"
+   version="18.0"
+   start="sys_sdram_pll_0.reset_source"
+   end="avalon_MM_4_to_1_adapter_0.reset" />
  <connection
    kind="reset"
    version="18.0"
