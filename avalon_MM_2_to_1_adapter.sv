@@ -1,4 +1,4 @@
-module avalon_MM_4_to_1_adapter(
+module avalon_MM_2_to_1_adapter(
     input clock,
     input reset_n,
     output s_waitrequest,
